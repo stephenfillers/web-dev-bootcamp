@@ -1,0 +1,1 @@
+Hey guys! This repo is my attempt to learn git and to maintain a repo over the lifespan of a project. The project itself is just me keeping a record of my progress on Udemy's Web Developer Bootcamp. Thanks for stopping by!
