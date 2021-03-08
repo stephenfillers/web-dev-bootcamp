@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = "d4Roll()" >Roll a d4</button>
+    <button onclick = "d6Roll()" >Roll a d6</button>
+    <button onclick = "d8Roll()" >Roll a d8</button>
+    <button onclick = "d12Roll()" >Roll a d12</button>
+    <button onclick = "d20Roll()" >Roll a d20</button>
+
+    <script>
+        
+        function d4Roll() {
+            alert(Math.floor(Math.random() * 4) + 1);
+        }
+        function d6Roll() {
+            alert(Math.floor(Math.random() * 6) + 1);
+        }
+        function d8Roll() {
+            alert(Math.floor(Math.random() * 8) + 1);
+        }
+        function d12Roll() {
+            alert(Math.floor(Math.random() * 12) + 1);
+        }
+        function d20Roll() {
+            alert(Math.floor(Math.random() * 20) + 1);
+        }    
+    </script>
+
+</body>
+</html>
