@@ -39,6 +39,13 @@
 //     }
 // }
 
+// for (let studentRow of seatingChart) {
+//     console.log(studentRow);
+//     for (let students of studentRow) {
+//         console.log(students);
+//     }
+// }
+
 // let i = 0;
 // while (i < 10) {
 //     i++;
@@ -62,9 +69,47 @@
 // }
 // console.log("Okay, you win!")
 
-for (let i = 0; i <= 1000; i++) {
-    console.log(i);
-    if (i === 100) {
-        break;
-    }
+// for (let i = 0; i <= 1000; i++) {
+//     console.log(i);
+//     if (i === 100) {
+//         break;
+//     }
+// }
+
+// const subreddits = ['cringe', 'books', 'chickens', 'funny', 'pics', 'soccer', 'mildyinteresting']
+
+// for (let i = 0; i < subreddits.length; i++) {
+//     console.log(`Visit reddit.com/r/${subreddits[i]}`)
+// }
+
+// for (let sub of subreddits) {
+//     console.log(sub);
+// }
+
+// for (let char of "hello world") {
+//     console.log(char);
+// }
+
+const testScores = {
+    keenan: 80,
+    damon: 67,
+    kim: 89,
+    shawn: 91,
+    marlon: 72,
+    dwayne: 77,
+    nadio: 83,
+    elvira:  97,
+    diedre: 81,
+    vonnie: 60
 }
+
+// for (let person in testScores) {
+//     console.log(`${person} scored ${testScores[person]}`);
+// }
+
+let total = 0;
+let scores = Object.values(testScores);
+for (let score of scores) {
+    total += score;
+}
+console.log(total / scores.length)
