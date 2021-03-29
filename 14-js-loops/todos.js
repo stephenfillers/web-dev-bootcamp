@@ -22,8 +22,6 @@ while (input !== "quit" && input !== "q") {
         }
     } else if (input === 'clear' || input === 'c') {
         console.clear();
-    } else {
-        console.log("Please enter a valid command.")
     }
     input = prompt("What else would you like to do?");
 }
