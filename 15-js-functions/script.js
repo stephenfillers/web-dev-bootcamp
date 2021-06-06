@@ -4,5 +4,12 @@ function singSong() {
     console.log('Mi')
 }
 
-singSong();
-singSong();
+function greet(firstName) {
+    console.log(`Hey there, ${firstName}!`)
+}
+
+function rant(message) {
+    console.log(message.toUpperCase());
+    console.log(message.toUpperCase());
+    console.log(message.toUpperCase());
+}
