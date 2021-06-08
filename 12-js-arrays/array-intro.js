@@ -1,16 +1,14 @@
-let days = ["monday", "tuesday", "wednesday"]
+// Basic array configuration
+let days = ['Monday', 'Tuesday', 'Wednesday'];
 
-let movieLine = ['tom', 'nancy']
-movieLine.push('pablo', 'oliver', 'eva')
+// Displays a particular index in an array (This example returns 'Tuesday')
+console.log(days[1])
 
-const colors = [
-    ['red'],
-    ['orange'],
-    ['yellow'],
-]
+// Displays a particular letter of a selected index in an array (This example returns 's', the third index in the array's index of 1)
+console.log(days[1][3])
 
-const gameBoard = [
-    ['X', 'O', 'X'],
-    ['O', null, 'X'],
-    ['O', 'O', 'X']
-]
+// You can also update an array item
+days[2] = 'Friday';
+
+// You can add array items to an arbitrary number, skipping in-between spaces
+days[71] = 'Blue 42';
