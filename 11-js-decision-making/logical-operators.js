@@ -1,29 +1,38 @@
 // const password = prompt("Enter your password");
-// if(password.length >= 6 && password.indexOf(' ') === -1) {
-//     console.log("Valid Password. Great job");
+
+// if (password.length >= 6 && password.indexOf(' ') === -1) {
+//     console.log('Good password, dude!')
 // } else {
-//     console.log("Incorrect password");
+//     console.log('Incorrect format. Sorry, try again');
 // }
 
-// const age = 18;
+// const age = prompt("Enter your age");
+
 // if (age >= 0 && age < 5 || age >= 65) {
-//     console.log("Free");
+//     console.log("You get in free");
 // } else if (age >= 5 && age < 10) {
-//     console.log("$10");
+//     console.log("You get in for $10");
 // } else if (age >= 10 && age < 65) {
 //     console.log("$20");
 // } else {
-//     console.log("Invalid Age, sucka.");
+//     console.log("Invalid age")
 // }
 
-// const firstName = prompt("Enter your first name");
-// if(!firstName) {
-//     firstName = prompt("Try again!");
+// let firstName = prompt("enter your first name");
+
+// if (!firstName) {
+//     firstName = prompt("Try again");
 // }
 
-const day = 40;
+// const age = prompt("Enter your age");
 
-switch (day) {
+// if (!(age >= 0 && age < 5 || age >= 65)) {
+//     console.log("You ain't getting in free.");
+// }
+
+const day = parseInt(prompt("Enter in the day!"));
+
+switch(day) {
     case 1:
         console.log("Monday");
         break;
@@ -40,11 +49,10 @@ switch (day) {
         console.log("Friday");
         break;
     case 6:
-        console.log("Saturday");
-        break;
     case 7:
-        console.log("Sunday");
+        console.log("Weekend");
         break;
+    
     default:
-        console.log("I don't know that.");
+        console.log("I don't know that");
 }
