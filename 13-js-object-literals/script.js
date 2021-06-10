@@ -1,44 +1,25 @@
+// JavaScript objects are made up of a key: value pair. Keys are always converted to strings, so be mindful of which of the below methods you use
+// when accessing data. 
 const person = {
-    firstName: 'Stephen',
-    lastName: 'Fillers',
-    upvotes: 20,
-    downvotes: 2,
-    netScore: 18,
+    firstName: 'Mick',
+    lastName: 'Jagger',
 }
 
+// How to access data from an object? Both of these equate to the same value
+person["firstName"];
+person.firstName;
+
 const kitchenSink = {
-    favNum: 8432,
+    favNum: 94324,
     isFunny: true,
     colors: ['red', 'orange']
 }
 
+// How to access data from an object?
+kitchenSink["favNum"]; 
+kitchenSink.favNum;
+
 const years = {
-    1999: 'Good',
-    2020: 'Bad',
+    1991: 'good',
+    2020: 'bad'
 }
-
-const restaurant = {
-    name: 'Ichiran Ramen',
-    address: `${Math.floor(Math.random() * 100) + 1} Johnson Ave`,
-    city: 'Brooklyn',
-    state: 'NY',
-    zipcode: '11206',
-}
-
-const midterms = {
-    danielle: 96,
-    thomas: 78
-}
-
-const comments = [
-    {
-        username: 'Tammy',
-        text: 'lolololol',
-        votes: 9
-    },
-    {
-        username: 'FishBoi',
-        text: 'glub glub',
-        votes: 12387
-    }
-]
