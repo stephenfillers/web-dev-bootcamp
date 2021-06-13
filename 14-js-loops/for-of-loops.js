@@ -5,6 +5,14 @@
 // }
 
 // You can run for of loops over strings too! 
-for (let char of "hello world") {
-    console.log(char);
+// for (let char of "hello world") {
+//     console.log(char);
+// }
+
+function sumArray(array) {
+    total = 0;
+    for(nums of array) {
+        total += nums;
+    }
+    return total;
 }
