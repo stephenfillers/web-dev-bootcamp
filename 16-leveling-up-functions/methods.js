@@ -6,25 +6,24 @@
 // // Every method IS actually a function, but not every function is a method.
 // // Let's make our own method.
 
+// Methods are generally properties added within an object
 // const myMath = {
-//     PI: 3.14159,
-//     square: function (num) {
+//     PI: 3.14,
+//     square: function(num) {
 //         return num * num;
 //     },
-//     cube: function (num) {
-//         return num * num * num;
-//     },
-//     newSquare(num) {
-//         return num * num;
-//     },
-
+//     cube: function(num) {
+//         return num ** 3;
+//     }
 // }
 
-const square = {
-    area(num) {
+// Here's the handy shorthand way to create methods
+const myMath = {
+    PI: 3.14,
+    square(num) {
         return num * num;
     },
-    perimeter(num) {
-        return num * num * num * num;
+    cube(num) {
+        return num ** 3;
     }
 }
