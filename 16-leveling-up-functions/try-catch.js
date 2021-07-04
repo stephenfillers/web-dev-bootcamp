@@ -9,7 +9,7 @@
 
 // console.log("After");
 
-function yell (msg){
+function yell(msg) {
     try {
         console.log(msg.toUpperCase().repeat(3));
     } catch {
