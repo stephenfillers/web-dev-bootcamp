@@ -1,66 +1,42 @@
-// // Traditional function
-// const add = function(x, y){
-//     return x + y;
-// }
+// Arrow functions are the shorthand way of writing function expressions. Similar to function epxressions, they cannot 
+// stand on their own and must first be assigned to a variable or used as a parameter.
 
-// // Arrow function equivalent
-// const add = (x, y) => {
-//     return x + y;
-// }
+// This is the traditional function expression
+const add1 = function(x, y) {
+    return x + y;
+}
 
-// const square = (num) => {
-//     return num ** 2;
-// }
+// Here's that same function, but written as the more compact arrow function.
+const add2 = (x, y) => {
+    return x + y;
+}
 
-// const rollDie = () => {
-//     return Math.floor(Math.random() * 6) + 1;
-// }
+// Arrow functions practice.
+const square = num => {
+    return num * num;
+}
 
-// // Dice Roller
-// const roll = (numberOfDice, numberOfSides) => {
-//     const diceBox = [];
-//     for (i = 0; i < numberOfDice; i++) {
-//         let resultOfRoll = Math.floor(Math.random() * numberOfSides) + 1;
-//         diceBox.push(resultOfRoll);
-//     }
-//     return(diceBox);
-// }
+// If the function has no arguments/parameters, you're still required to use parentheses.
+const rollDie = () => {
+    return Math.floor(Math.random() * 6) + 1;
+}
 
-// Arrow function implicit returns. To use implicit returns, you replace the curly braces {} with parenthesis ()
-// 
-// const rollDie = () => (
-//     Math.floor(Math.random() * 6) + 1
-// )
+// If a function has only one argument/parameter, the parentheses are optional
+const rollDie2 = num => {
+    return Math.floor(Math.random() * num) + 1;
+}
 
-// // You can also remove the parenthesis if you make a one-line function
-// const add = (a, b) => a + b
+//////////////////////////////////////// Arrow Functions - Implicit Returns //////////////////////////////////////////
 
-// So, using what we've learned, how can we shorten the map functions we learned earlier?
-const movies = [
-    {
-        title: 'Amadeus',
-        score: 99
-    },
-    {
-        title: 'Stand By Me',
-        score: 85
-    },
-    {
-        title: 'Parasite',
-        score: 95
-    },
-    {
-        title: 'Alien',
-        score: 90
-    }
-]
+// An implicit return removes the need to use the return keyword. Return is implied! 
+// To use an implicit return remove the return keyword and replace the curly brackets with parentheses.
+// This only works when using arrow functions and when the function has only one expression.
 
-// Traditional map function
-// const newMovies = movies.map(function(movie){
-//     return `${movie.title} - ${movie.score / 10}!`
-// })
+const rollDie3 = () => (
+    Math.floor(Math.random() * 6) + 1
+)
 
-// New arrow function
-const newMovies = movies.map(movie => (
-    `${movie.title} - ${movie.score / 10}!`
-))
+// In fact, you can shorten this even further if you place the function on one line.
+// This allows you to remove the second set of parentheses.
+
+const add3 = (x, y) => x + y
