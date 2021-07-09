@@ -34,7 +34,7 @@
 
 /////////////////////////// JavaScript Manipulation //////////////////////////////////
 
-const allLinks = document.querySelectorAll('a');
+// const allLinks = document.querySelectorAll('a');
 
 // for (let link of allLinks) {
 //     link.innerText = 'I am a link!!!'; // innerText is a good choice when HTML tags don't matter
@@ -57,13 +57,65 @@ const allLinks = document.querySelectorAll('a');
 
 ////////////////////////// Changing Styles /////////////////////////////
 
-const h1 = document.querySelector('h1');
-h1.style.fontSize = '36px'
-h1.style.color = 'green'
+// const h1 = document.querySelector('h1');
+// h1.style.fontSize = '36px'
+// h1.style.color = 'green'
 
-const links = document.querySelectorAll('a');
-for (let link of links) {
-    link.style.color = 'magenta';
-    link.style.textDecorationColor = 'cyan';
-    link.style.textDecorationStyle = 'wavy';
-}
+// const links = document.querySelectorAll('a');
+// for (let link of links) {
+//     link.style.color = 'magenta';
+//     link.style.textDecorationColor = 'cyan';
+//     link.style.textDecorationStyle = 'wavy';
+// }
+
+// //////////////////////////// classList /////////////////////////////
+
+// const h2 = document.querySelector('h2');
+
+// h2.classList // displays which classes are assigned
+// h2.classList.add('border') // adds a class
+// h2.classList.toggle('purple') // toggles a class
+
+// /////////////////// Traversing parent/child/sibling //////////////////
+
+// const firstBold = document.querySelector('b')
+// firstBold.parentElement // selects parent
+
+// const paragraph = firstBold.parentElement
+// paragraph.children // displays childen of the selected element
+
+// const squareImg = document.querySelector('.square')
+// squareImg.nextElementSibling
+// squareImg.previousElementSibling
+
+/////////////////// Append & AppendChild //////////////////
+
+// const newImg = document.createElement('img')
+// newImg.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Male_Silkie.png/460px-Male_Silkie.png'
+// newImg.classList.add('square')
+// document.body.appendChild(newImg)
+
+// const newH3 = document.createElement('h3')
+// newH3.innerText = 'I am new!'
+// document.body.appendChild(newH3)
+
+// const p = document.querySelector('p')
+// p.append('I am new text, yayyyy! ', 'This adds multiple pieces of content!!!')
+
+// const newB = document.createElement('b')
+// newB.append('Hi! ')
+// p.prepend(newB)
+
+// const h2 = document.createElement('h2')
+// h2.append('Are adorable chickens')
+// const h1 = document.querySelector('h1')
+
+// h1.insertAdjacentElement('afterend', h2)
+
+/////////////////// Removing Elements //////////////////
+
+// const ul = document.querySelector('ul')
+// ul.removeChild(firstLi)
+
+const firstLi = document.querySelector('li')
+firstLi.remove()
