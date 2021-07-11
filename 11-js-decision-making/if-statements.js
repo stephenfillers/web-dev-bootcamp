@@ -28,15 +28,33 @@
 //     console.log("You are a senior. You pay $10")
 // }
 
-const password = prompt("Please enter a new password");
+// const password = prompt("Please enter a new password");
 
-//Password must be 6+ characters
-if (password.length >= 6) {
-    if (password.indexOf(' ') === -1) {
-        console.log('Valid password!');
-    } else {
-        console.log('Your password cannot contain a space.');
+// //Password must be 6+ characters
+// if (password.length >= 6) {
+//     if (password.indexOf(' ') === -1) {
+//         console.log('Valid password!');
+//     } else {
+//         console.log('Your password cannot contain a space.');
+//     }
+// } else {
+//     console.log('Password too short!');
+// }
+
+// for (let triangle = '#'; triangle.length <= 7; triangle += '#') {
+//     console.log(triangle);
+// }
+
+for (let num = 0; num <= 100; num++) {
+    if (num != 0) {
+        if (num % 3 === 0 && num % 5 === 0) {
+            console.log('FizzBuzz');
+        } else if (num % 3 === 0) {
+            console.log('Fizz');
+        } else if (num % 5 === 0) {
+            console.log('Buzz');
+        } else {
+            console.log(num);
+        }
     }
-} else {
-    console.log('Password too short!');
 }
