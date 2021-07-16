@@ -26,6 +26,4 @@ const rainbow = async () => {
     return 'All done!';
 }
 
-rainbow().then(() => {
-    console.log('End of rainbow')
-})
+rainbow().then(() => console.log('End of rainbow'))
