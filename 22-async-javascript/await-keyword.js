@@ -7,6 +7,7 @@ const delayedColorChange = (color, delay) => {
     })
 }
 
+
 // delayedColorChange('red', 1000)
 // .then(() => delayedColorChange('orange', 1000))
 // .then(() => delayedColorChange('yellow', 1000))
@@ -26,4 +27,9 @@ const rainbow = async () => {
     return 'All done!';
 }
 
-rainbow().then(() => console.log('End of rainbow'))
+// rainbow().then(() => console.log('End of rainbow'))
+
+const printRainbow = async () => {
+    await rainbow();
+    console.log("End of rainbow!")
+}
