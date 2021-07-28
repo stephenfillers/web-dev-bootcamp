@@ -1,17 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= sub %> Template
-    </title>
-</head>
+<div class="container px-5">
 
-<body>
-    <h1>Welcome to the <%= sub %> subreddit!</h1>
-</body>
+    <div class="row py-3 justify-content-between">
+        <div class="col-8">
+            <h1>Welcome to the <%= name %> subreddit!</h1>
+            <p class="lead"><%= description %></p>
+        </div>
+        <div class="col-4">/r/<%= name %> has <strong><%= subscribers %></strong> total subscribers</div>
+    </div>
+    
+    <hr>
 
-</html>
+    <% for (let post of posts) { %>
+        <article>
+            <p> <%= post.title %> <b> - <%= post.author %> </b> </p>
+            <% if (post.img) { %>
+                <img class="img-fluid rounded d-block py-3" src="<%= post.img %>" alt="">
+            <% } %>
+            <hr>
+        </article>
+    <% } %>
+</div>
+
+<%- include('partials/footer') %>
