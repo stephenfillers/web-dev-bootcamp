@@ -1,15 +1,20 @@
-const button = document.querySelector('#colorButton');
-const h1 = document.querySelector('#colorH1');
+const colorH1 = document.querySelector('#colorH1');
+const colorButton = document.querySelector('#colorButton');
 
-button.addEventListener('click', () => {
+colorButton.addEventListener('click', () => {
     const newColor = makeRandomColor();
+    colorH1.textContent = newColor;
     document.body.style.backgroundColor = newColor;
-    h1.innerText = newColor;
-});
+})
 
 const makeRandomColor = () => {
-    let r = Math.floor(Math.random() * 255) + 1;
-    let g = Math.floor(Math.random() * 255) + 1;
-    let b = Math.floor(Math.random() * 255) + 1;
+    const r = Math.floor(Math.random() * 255) + 1;
+    const g = Math.floor(Math.random() * 255) + 1;
+    const b = Math.floor(Math.random() * 255) + 1;
+    if (r + b + g < 150) {
+        colorH1.style.color = 'white';
+    } else {
+        colorH1.style.color = 'black';
+    }
     return `rgb(${r}, ${g}, ${b})`;
 }

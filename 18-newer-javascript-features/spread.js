@@ -14,17 +14,17 @@
 // // This merges the two arrays into a single array, as opposed to create an array of arrays.
 // const allPets = [...dogs, ...cats]
 
-// // We can even use spread with objects!
-// const feline = {legs: 4, family: 'Felidae'};
-// const canine = {isFurry: true, family: 'Caninae'};
+// We can even use spread with objects!
+const feline = { legs: 4, family: 'Felidae' };
+const canine = { isFurry: true, family: 'Caninae' };
 
-// // This merges the two objects
-// const catdog = {...feline, ...canine}
+// This merges the two objects
+const catdog = { ...feline, ...canine }
 
-// Use case. Take data from a user-generated form and add new data to it.
-const dataFormFrom = {
-    email: 'myemail@gmail.com',
-    password: 'plaintext',
-    username: 'tfunke'
-}
-const userData = {...dataFormFrom, isAdmin: false, id: 2345}
+// // Use case. Take data from a user-generated form and add new data to it.
+// const dataFormFrom = {
+//     email: 'myemail@gmail.com',
+//     password: 'plaintext',
+//     username: 'tfunke'
+// }
+// const userData = { ...dataFormFrom, isAdmin: false, id: 2345 }
