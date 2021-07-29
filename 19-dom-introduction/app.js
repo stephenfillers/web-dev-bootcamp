@@ -95,9 +95,9 @@
 // newImg.classList.add('square')
 // document.body.appendChild(newImg)
 
-// const newH3 = document.createElement('h3')
-// newH3.innerText = 'I am new!'
-// document.body.appendChild(newH3)
+const newH3 = document.createElement('h3')
+newH3.innerText = 'I am new!'
+document.body.appendChild(newH3)
 
 // const p = document.querySelector('p')
 // p.append('I am new text, yayyyy! ', 'This adds multiple pieces of content!!!')
@@ -106,16 +106,21 @@
 // newB.append('Hi! ')
 // p.prepend(newB)
 
-// const h2 = document.createElement('h2')
-// h2.append('Are adorable chickens')
-// const h1 = document.querySelector('h1')
+// const h1 = document.querySelector('h1');
+// const h2 = document.createElement('h2');
+// const h3 = document.createElement('h3');
 
-// h1.insertAdjacentElement('afterend', h2)
+// h2.textContent = 'Are adorable chickens!';
+// h3.textContent = 'I am h3!';
+
+// h1.insertAdjacentElement('afterend', h2); // clunky, but offers good flexibility
+// h2.after(h3); //shorthand if you want to insert something after an element
+// h1.before(h3); //shorthand if you want to insert something before an element
 
 /////////////////// Removing Elements //////////////////
 
 // const ul = document.querySelector('ul')
 // ul.removeChild(firstLi)
 
-const firstLi = document.querySelector('li')
-firstLi.remove()
+// const firstLi = document.querySelector('li')
+// firstLi.remove()
