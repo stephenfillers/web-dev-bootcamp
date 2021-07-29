@@ -5,17 +5,17 @@
 // const [gold, silver, bronze, ...everyoneElse] = scores;
 
 // // Destructuring objects
-const user = {
-    email: 'harvey@gmail.com',
-    password: 'siov23sdf0jl#$',
-    firstName: 'Harvey',
-    lastName: 'Milk',
-    born: 1930,
-    died: 1978,
-    bio: 'Some text here',
-    city: 'San Francisco',
-    state: 'California'
-}
+// const user = {
+//     email: 'harvey@gmail.com',
+//     password: 'siov23sdf0jl#$',
+//     firstName: 'Harvey',
+//     lastName: 'Milk',
+//     born: 1930,
+//     died: 1978,
+//     bio: 'Some text here',
+//     city: 'San Francisco',
+//     state: 'California'
+// }
 
 // const user2 = {
 //     email: 'stacy@gmail.com',
@@ -40,67 +40,81 @@ const user = {
 //     return `${firstName} ${lastName}`;
 // }
 
-function fullName({firstName, lastName}) {
-    return `${firstName} ${lastName}`;
-}
+// function fullName({firstName, lastName}) {
+//     return `${firstName} ${lastName}`;
+// }
 
-const movies = [
-    {
-        title: 'Amadeus',
-        score: 99,
-        year: 1984
-    },
-    {
-        title: 'Sharknado',
-        score: 35,
-        year: 2013
-    },
-    {
-        title: '13 Going on 30',
-        score: 70,
-        year: 2004
-    },
-    {
-        title: 'Stand By Me',
-        score: 85,
-        year: 1986
-    },
-    {
-        title: 'Waterworld',
-        score: 62,
-        year: 1995
-    },
-    {
-        title: 'Jingle All The Way',
-        score: 71,
-        year: 1996
-    },
-    {
-        title: 'Parasite',
-        score: 95,
-        year: 2019
-    },
-    {
-        title: 'Notting Hill',
-        score: 77,
-        year: 1999
-    },
-    {
-        title: 'Alien',
-        score: 90,
-        year: 1979
+// const movies = [
+//     {
+//         title: 'Amadeus',
+//         score: 99,
+//         year: 1984
+//     },
+//     {
+//         title: 'Sharknado',
+//         score: 35,
+//         year: 2013
+//     },
+//     {
+//         title: '13 Going on 30',
+//         score: 70,
+//         year: 2004
+//     },
+//     {
+//         title: 'Stand By Me',
+//         score: 85,
+//         year: 1986
+//     },
+//     {
+//         title: 'Waterworld',
+//         score: 62,
+//         year: 1995
+//     },
+//     {
+//         title: 'Jingle All The Way',
+//         score: 71,
+//         year: 1996
+//     },
+//     {
+//         title: 'Parasite',
+//         score: 95,
+//         year: 2019
+//     },
+//     {
+//         title: 'Notting Hill',
+//         score: 77,
+//         year: 1999
+//     },
+//     {
+//         title: 'Alien',
+//         score: 90,
+//         year: 1979
+//     }
+// ]
+
+// movies.filter(movie => movie.score >= 90)
+// movies.filter(({score}) => score >= 90)
+
+// // Traditional function
+// const ratings = movies.map(movie => {
+//     return `${movie.title} (${movie.year}) is rated ${movie.score / 10}/10`
+// })
+
+// // Using destructuring
+// const ratings2 = movies.map(({title, score, year}) => {
+//     return `${title} (${year}) is rated ${score/10}/10`
+// })
+
+const user = {
+    id: 42,
+    displayName: 'jdoe',
+    fullName: {
+        firstName: 'John',
+        lastName: 'Doe'
     }
-]
+};
 
-movies.filter(movie => movie.score >= 90)
-movies.filter(({score}) => score >= 90)
-
-// Traditional function
-const ratings = movies.map(movie => {
-    return `${movie.title} (${movie.year}) is rated ${movie.score / 10}/10`
-})
-
-// Using destructuring
-const ratings2 = movies.map(({title, score, year}) => {
-    return `${title} (${year}) is rated ${score/10}/10`
-})
+// const { id, displayName, fullName: { firstName: name } } = user;
+function userId({ id, displayName }) {
+    return id + displayName;
+}
