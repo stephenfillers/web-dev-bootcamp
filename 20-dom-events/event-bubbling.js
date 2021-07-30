@@ -3,7 +3,7 @@ const container = document.querySelector('#container')
 
 button.addEventListener('click', function(event) {
     container.style.backgroundColor = makeRandomColor();
-    event.stopPropagation();
+    event.stopPropagation(); // the stopPropagation prevents event bubbling
 })
 
 container.addEventListener('click', function(event) {

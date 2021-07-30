@@ -1,33 +1,34 @@
-// document.querySelector('button').addEventListener('click', function(event) {
+// document.querySelector('button').addEventListener('click', event => {
+//     alert('CLICK')
 //     console.log(event);
 // })
 
-// const input = document.querySelector('input');
+const input = document.querySelector('input');
+const typeWatch = document.querySelector('h1');
 
-// input.addEventListener('keydown', function(event) {
-//     console.log(event.key)
-//     console.log(event.code)
-// })
+input.addEventListener('keydown', event => {
+    console.log(event.key);
+})
 
-// input.addEventListener('keyup', function() {
-//     console.log("KEYUP")
-// })
+input.addEventListener('keyup', event => {
+    console.log(event.code);
+})
 
-window.addEventListener('keydown', function(event) {
+window.addEventListener('keydown', event => {
     switch(event.code) {
-        case 'KeyW':
-            console.log("W - Up")
+        case 'ArrowUp' :
+            console.log('Arrow Up');
             break;
-        case 'KeyA':
-            console.log("A - Left")
+        case 'ArrowDown' :
+            console.log('Arrow Down');
             break;
-        case 'KeyS':
-            console.log("S - Down")
+        case 'ArrowLeft' :
+            console.log('Arrow Left');
             break;
-        case 'KeyD':
-            console.log("D - Right")
-            break;
+        case 'ArrowRight' :
+            console.log('Arrow Right');
+            break; 
         default:
-            console.log("Not a valid movement key.")   
+            console.log("I'm not listening for that key. Sorry!")
     }
 })
