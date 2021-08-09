@@ -6,4 +6,6 @@ const isRightTriangle = (a, b, c) => (
     square(a) + square(b) === square(c)
 );
 
+console.log('done');
 isRightTriangle(3, 4, 5);
+console.log('done');
