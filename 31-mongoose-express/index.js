@@ -3,7 +3,9 @@ const app = express();
 const path = require('path');
 const mongoose =  require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/shopApp', { useNewUrlParser: true, useUnifiedTopology: true })
+const Product = require('./models/product');
+
+mongoose.connect('mongodb://localhost:27017/farmStand', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("Mongo connection open!")
     })
@@ -15,8 +17,10 @@ mongoose.connect('mongodb://localhost:27017/shopApp', { useNewUrlParser: true, u
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.get('/dog', (req, res) => {
-    res.send('Woof!');
+app.get('/products', async (req, res) => {
+    const products = await Product.find({})
+    console.log(products);
+    res.render('products/index', { products });
 })
 
 app.listen(3000, () => {
