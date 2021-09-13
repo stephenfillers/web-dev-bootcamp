@@ -7,10 +7,10 @@ const Product = require('./models/product');
 
 mongoose.connect('mongodb://localhost:27017/farmStand', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        console.log("Mongo connection open!")
+        console.log("Connection to Mongo successful")
     })
     .catch(err => {
-        console.log("Sorry, I've encountered a Mongo error.");
+        console.log("Error connecting to Mongo");
         console.log(err);
     })
 
@@ -19,10 +19,15 @@ app.set('view engine', 'ejs');
 
 app.get('/products', async (req, res) => {
     const products = await Product.find({})
-    console.log(products);
     res.render('products/index', { products });
 })
 
+app.get('/products/:id', async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.findById(id);
+    res.render('products/show', { product });
+})
+
 app.listen(3000, () => {
-    console.log("App is listening on port 3000!")
+    console.log("App is listening on port 3000")
 })
